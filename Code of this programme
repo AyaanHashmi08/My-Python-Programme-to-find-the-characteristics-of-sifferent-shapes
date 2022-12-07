@@ -1,0 +1,385 @@
+from math import *
+print("")
+print("Select the shape: ")
+print("")
+print(" 1.Square")
+print(" 2.Cube")
+print(" 3.Rectangle")
+print(" 4.Cuboid")
+print(" 5.Cylinder")
+print(" 6.Triangle")
+print(" 7.Cone")
+print(" 8.Pyramid")
+print(" 9.Circle")
+print(" 10.Sphere")
+print("")
+choice = input("Enter Index of the Shape: ")
+if choice == 1:
+    print("")
+    print("You selected Square!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Area\n 2.Perimeter\n 3.Diagonal")
+    sqchoice = int(input("Enter Index of what you want to find: "))
+    if sqchoice == 1:
+        print("")
+        print("You selected Area!")
+        sqlsq = float(input("Enter the side of the square: "))
+        aresq = sqlsq * sqlsq
+        print("Area of the square = " + str(aresq))
+    elif sqchoice == 2:
+        print("")
+        print("You selected Perimeter!")
+        sidesq = float(input("Enter the side of the square: "))
+        persq = 4 * sidesq
+        print("Perimeter of the square = " + str(persq))
+    elif sqchoice == 3:
+        print("")
+        print("You selected Diagonal!")
+        sidedsq = float(input("Enter the side of the square: "))
+        diagonal_of_sq = sidedsq * sqrt(2)
+        print("Diagonal of the square = " + str(diagonal_of_sq))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 2:
+    print("")
+    print("You have selected Cube!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Total Surface Area (TSA)\n 2.Lateral Surface Area (LSA)\n 3.Volume\n 4.Diagonal\n 5.Perimeter")
+    cbechoice = int(input("Enter Index of what you want to find: "))
+    if cbechoice == 1:
+        print("")
+        print("You selected Total Surface Area (TSA)!")
+        tsasidecbe = float(input("Enter the side of the cube: "))
+        tsacbe = pow(tsasidecbe, 2) * 6
+        print("Total Surface Area (TSA) of the cube = " + str(tsacbe))
+    elif cbechoice == 2:
+        print("")
+        print("You selected Lateral Surface Area (LSA)!")
+        lsasidecbe = float(input("Enter the side of the cube: "))
+        lsacbe = 4 * pow(lsasidecbe, 2)
+        print("Lateral Surface Area (LSA) of the cube = " + str(lsacbe))
+    elif cbechoice == 3:
+        print("")
+        print("You selected Volume!")
+        volsidecbe = float(input("Enter the side of the cube: "))
+        volcbe = pow(volsidecbe, 3)
+        print("Volume of the cube: " + str(volcbe))
+    elif cbechoice == 4:
+        print("")
+        print("You selected Diagonal!")
+        dgncbesid = float(input("Enter the side of the cube: "))
+        dgncbe = sqrt(3) * dgncbesid
+        print("Diagonal of the cube = " + str(dgncbe))
+    elif cbechoice == 5:
+        print("")
+        print("You selected Perimeter!")
+        percbeside = float(input("Enter the side of the square: "))
+        percbe = percbeside * 12
+        print("Perimeter of the cube = " + str(percbe))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 3:
+    print("")
+    print("You selected Rectangle!")
+    print("")
+    print("Select what you want to find:")
+    print(" 1.Area\n 2.Perimeter\n 3.Diagonal")
+    rcchoice = int(input("Enter Index of what you want to find: "))
+    if rcchoice == 1:
+        print("")
+        print("You selected Area!")
+        lrc = float(input("Enter the length of the rectangle: "))
+        brc = float(input("Enter the breadth of the rectangle: "))
+        arearc = lrc * brc
+        print("Area of the rectangle = " + str(arearc))
+    elif rcchoice == 2:
+        print("")
+        print("You selected Perimeter!")
+        plrc = float(input("Enter the length of the rectangle: "))
+        pbrc = float(input("Enter the breadth of the rectangle: "))
+        prc = 2 * ( plrc + pbrc)
+        print("Perimeter of the rectangle = " + str(prc))
+    elif rcchoice == 3:
+        print("")
+        print("You selected Diagonal!")
+        dlrc = float(input("Enter the length of the rectangle: "))
+        dbrc = float(input("Enter the breadth of the rectangle: "))
+        drc = sqrt((pow(dlrc, 2) + pow(dbrc, 2)))
+        print("Diagonal of the rectangle = " + str(drc))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 4:
+    print("")
+    print("You selected Cuboid!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Total Surface Area (TSA)\n 2.Lateral Surface Area (LSA)\n 3.Volume\n 4.Diagonal\n 5.Perimeter")
+    cbdchoice = int(input("Enter Index of what you want to find: "))
+    if cbdchoice == 1:
+        print("")
+        print("You selected Total Surface Area (TSA)!")
+        tsalcbd = float(input("Enter the length of the cuboid: "))
+        tsabcbd = float(input("Enter the breadth of the cuboid: "))
+        tsahcbd = float(input("Enter the height of the cuboid: "))
+        tsacbd = 2 * ( tsalcbd*tsabcbd + tsabcbd*tsahcbd + tsalcbd*tsahcbd)
+        print("Total Surface Area (TSA) of cuboid = " + str(tsacbd))
+    elif cbdchoice == 2:
+        print("")
+        print("You selected Lateral Surface Area (LSA)!")
+        lsalcbd = float(input("Enter the length of the cuboid: "))
+        lsabcbd = float(input("Enter the breadth of the cuboid: "))
+        lsahcbd = float(input("Enter the height of the cuboid"))
+        lsacbd = 2 * lsahcbd * (lsalcbd + lsabcbd)
+        print("Lateral Surface Area (LSA) of cuboid = " + str(lsacbd))
+    elif cbdchoice == 3:
+        print("")
+        print("You selected Volume!")
+        vlcbd = float(input("Enter the length of the cuboid: "))
+        vbcbd = float(input("Enter the breadth of the cuboid: "))
+        vhcbd = float(input("Enter the height of the cuboid: "))
+        vcbd = vlcbd * vbcbd *vhcbd
+        print("Volume of the cuboid = " + str(vcbd))
+    elif cbdchoice == 4:
+        print("")
+        print("You selected Diagonal!")
+        dgnlcbd = float(input("Enter the length of the cuboid: "))
+        dgnbcbd = float(input("Enter the breadth of the cuboid: "))
+        dgnhcbd = float(input("Enter the height of the cuboid: "))
+        dgncbd = sqrt(pow(dgnlcbd, 2) + pow(dgnbcbd, 2) + pow(dgnhcbd, 2))
+        print("Diagonal of the cuboid = " + str(dgncbd))
+    elif cbdchoice == 5:
+        print("")
+        print("You selected Perimeter!")
+        plcbd = float(input("Enter the length of the cuboid: "))
+        pbcbd = float(input("Enter the breadth of the cuboid: "))
+        phcbd = float(input("Enter the height of the cuboid: "))
+        pcbd = 4 * (plcbd + pbcbd + phcbd)
+        print("Perimeter of the cuboid = " + str(pcbd))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 5:
+    print("")
+    print("You selected Cylinder!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Total Surface Area (TSA)\n 2.Curved Surface Area (CSA)\n 3.Volume")
+    cychoice = int(input("Enter Index of what you want to find: "))
+    if cychoice == 1:
+        print("")
+        print("You have selected Total Surface Area (TSA)!")
+        tsahcy = float(input("Enter the height of the cylinder: "))
+        tsarcy = float(input("Enter the radius of the circular bases: "))
+        tsacyare = 2 * 22 / 7 * tsarcy * ( tsahcy + tsarcy )
+        print("Total Surface Area (TSA) of the cylinder = " + str(tsacyare))
+    elif cychoice == 2:
+        print("")
+        print("You have selected Curved Surface Area (CSA)!")
+        csahcy = float(input("Enter the height of the the cylinder: "))
+        csarcy = float(input("Enter the radius of the circular bases: "))
+        csacy = 2 * 22 / 7 * csarcy * csahcy
+        print("Curved Surface Area (CSA) of the cylinder = " + str(csacy))
+    elif cychoice == 3:
+        print("")
+        print("You have selected Volume!")
+        vhcy = float(input("Enter the height of the cylinder: "))
+        vrcy = float(input("Enter the radius o the circular bases: "))
+        vcy = 22 / 7 * vrcy * vrcy * vhcy
+        print("Volume of the cylinder = " + str(vcy))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 6:
+    print("")
+    print("You selected Triangle!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Area\n 2.Perimeter")
+    trichoice = int(input("Enter Index of what you want to find: "))
+    if trichoice == 1:
+        print("")
+        print("You selected Area!")
+        trimethod = int(input("By which method do you want to find the area?\n 1.(1/2×Base×Height)\n 2.[√s(s-a)(s-b)(s-c)]\nEnter Index of the method you want to you use: "))
+        if trimethod == 1:
+            areatrimethod1height = float(input("Enter the length of the height of the triangle: "))
+            areatrimethod1base = float(input("Enter the length of the base of the triangle: "))
+            areatrimethod1 = 1 / 2 * areatrimethod1base * areatrimethod1height
+            print("Area of the triangle = " + str(areatrimethod1))
+        elif trimethod == 2:
+            areatrimethod2side1 = float(input("Enter the length of the first side of the triangle: "))
+            areatrimethod2side2 = float(input("Enter the length of the second side of the triangle: "))
+            areatrimethod2side3 = float(input("Enter the length of the third side of the triangle: "))
+            areatri2perimeter = areatrimethod2side1 + areatrimethod2side2 + areatrimethod2side3
+            areatri2semiperimeter = areatri2perimeter / 2
+            areatrimethod2 = sqrt(areatri2semiperimeter * (areatri2semiperimeter - areatrimethod2side1) * (areatri2semiperimeter - areatrimethod2side2) * (areatri2semiperimeter - areatrimethod2side3))
+            print("Area of the triangle = " + str(areatrimethod2))
+        else:
+            print("")
+            print("INVALID INPUT")
+    elif trichoice == 2:
+        print("")
+        print("You selected Perimeter!")
+        pertriside1 = float(input("Enter the length of the first side of the triangle: "))
+        pertriside2 = float(input("Enter the length of the second side of the triangle: "))
+        pertriside3 = float(input("Enter the length of the third side of the triangle: "))
+        pertri = pertriside1 + pertriside2 + pertriside3
+        print("Perimeter of the triangle = " + str(pertri))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 7:
+    print("")
+    print("You selected Cone!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Total Surface Area (TSA)\n 2.Curved Surface Area (CSA)\n 3.Volume\n 4.Slant Height")
+    cnchoice = int(input("Enter Index of what you want to find: "))
+    if cnchoice == 1:
+        print("")
+        print("You have selected Total Surface Area (TSA)!")
+        cnslanthight = float(input("Enter the length of the slant height of the cone: "))
+        cnradius = float(input("Enter the radius of the circular base of the cone: "))
+        tsacn = 22 / 7 * cnradius * ( cnslanthight * cnradius)
+        print("Total Surface Area (TSA) of the cone = " + str(tsacn))
+    elif cnchoice == 2:
+        print("")
+        print("You have selected Curved Surface Area (CSA)!")
+        csacnsl = float(input("Enter the length of the slant height of the cone: "))
+        csacnradius = float(input("Enter the radius of the circular base of the cone: "))
+        csacn = 22 / 7 * csacnradius * csacnsl
+        print("Curved Surface Area (CSA) of the cone = " + str(csacn))
+    elif cnchoice == 3:
+        print("")
+        print("You have selected Volume!")
+        vhcn = float(input("Enter the length of the height of the cone: "))
+        vrcn = float(input("Enter the radius of the circular base of the circular cone: "))
+        vcn = 1 / 3 * 22 / 7 * vrcn * vrcn * vhcn
+        print("Volume of the cone = " + str(vcn))
+    elif cnchoice == 4:
+        print("")
+        print("You selected Slant Height!")
+        slcnh = float(input("Enter the height of the cone: "))
+        slcnr = float(input("Enter the radius of the circular base: "))
+        slcn = sqrt(pow(slcnr, 2) + pow(slcnh, 2))
+        print("Slant Height of the cone = " + str(slcn))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 8:
+    print("")
+    print("You selected Pyramid!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Total Surface Area (TSA)\n 2.Lateral Surface Area (LSA)\n 3.Volume")
+    pychoice = int(input("Enter Index of what you want to find: "))
+    if pychoice == 1:
+        print("")
+        print("You have selected Total Surface Area (TSA)!")
+        pyper = float(input("Enter the perimeter of the base of the pyramid: "))
+        pybasearea = float(input("Enter the area of the base of the pyramid: "))
+        pysl = float(input("Enter the slant height of the pyraamid: "))
+        pytsa = 1 / 2 * pyper * pysl + pybasearea
+        print("Total Surface Area (TSA) of the pyramid = " + str(pytsa))
+    elif pychoice == 2:
+        print("")
+        print("You have selected Lateral Surface Area (LSA)!")
+        lsappy = float(input("Enter the perimeter of the base of the pyramid: "))
+        lsaslpy = float(input("Enter the slant height of the pyramid: "))
+        lsapy = 1 / 2 * lsappy * lsaslpy
+        print("Lateral Surface Area (LSA) of the pyramid: ")
+    elif pychoice == 3:
+        print("")
+        print("You have selected Volume!")
+        pybaseareav = float(input("Enter the area of the base of the pyramid: "))
+        pyvh = float(input("Enter the height of the pyramid: "))
+        pyv = 1 / 2 * pybaseareav * pyvh
+        print("Volume of the pyramid = " + str(pyv))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 9:
+    print("")
+    print("You selected Circle!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Area\n 2.Circumference\n 3.Diameter\n 4.Radius")
+    circhoice = int(input("Enter Index of what you want to find: "))
+    if circhoice == 1:
+        print("")
+        print("You selected Area!")
+        cirr = float(input("Enter the radius of the circle: "))
+        areacir = 22 / 7 * pow(cirr, 2)
+        print("Area of the circle = " + str(areacir))
+    elif circhoice == 2:
+        print("")
+        print("You selected Circumference!")
+        cirrcmf = float(input("Enter the radius of the circle: "))
+        circmf = 2 * 22 / 7 * cirrcmf
+        print("Circumference of the circle = " + str(circmf))
+    elif circhoice == 3:
+        print("")
+        print("You selected Diameter!")
+        cirrdm = float(input("Enter the radius of the circle: "))
+        dmcir = 2 * cirrdm
+        print("Diameter of the circle = " + str(dmcir))
+    elif circhoice == 4:
+        print("")
+        print("You selected Radius!")
+        cirdm = float(input("Enter the diameter of the circle: "))
+        cirrr = cirdm / 2
+        print("Radius of the circle = " + str(cirrr))
+    else:
+        print("")
+        print("INVALID INPUT")
+elif choice == 10:
+    print("")
+    print("You selected Sphere!")
+    print("")
+    print("Select what you want to find: ")
+    print(" 1.Surface Area (SA)\n 2.Volume\n 3.Diameter\n 4.Radius")
+    sphchoice = int(input("Enter Index of what you want to find: "))
+    if sphchoice == 1:
+        print("")
+        print("You selected Surface Area (SA)!")
+        sphsar = float(input("Enter the radius of the sphere: "))
+        sphsa = 4 * 22 / 7 * pow(sphsar, 2)
+        print("Surface Area (SA) of the sphere = " + str(sphsa))
+    elif sphchoice == 2:
+        print("")
+        print("You selected Volume!")
+        sphvr = float(input("Enter the radius of the sphere: "))
+        sphv = ( 4 / 3 ) * 22 / 7 * pow(sphvr, 3)
+        print("Volume of the sphere = " + str(sphv))
+    elif sphchoice == 3:
+        print("")
+        print("You selected Diameter!")
+        sphdr = float(input("Enter the radius of the sphere: "))
+        sphd = 2 * sphdr
+        print("Diameter of the sphere = " + str(sphd))
+    elif sphchoice == 4:
+        print("")
+        print("You selected Radius!")
+        sphrd = float(input("Enter the diameter of the square: "))
+        sphr = sphrd / 2
+        print("Radius of the sphere = " + str(sphr))
+    else:
+        print("")
+        print("INVALID INPUT")
+else:
+    print("")
+    print("")
+    print("INVALID INPUT")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
